@@ -26,9 +26,10 @@ export function About(){
                         <span className="font-headline bold-bold uppercase text-blue-900">Gustavo Musse</span>
                     </p>
                 </div>
-                <div className="absolute left-2 top-4 h-24 w-20 rounded-lg bg-gray-600 bg-[url(https://images.unsplash.com/photo-1536148935331-408321065b18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80)] 
-                bg-center bg-cover md:-left-12 md:-top-12 md:h-72 md:-56 ">
-                </div>            
+                <figure>
+                    <div className="absolute -left-2 -top-4 h-24 w-20 rounded-lg bg-gray-600 bg-[url('assets/images/man_developer.png')] 
+                    bg-cover bg-center md:-left-12 md:-top-12  md:h-72 md:w-56"></div>            
+                </figure>
             </div>
         </div>
        </section> 
