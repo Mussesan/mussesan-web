@@ -3,8 +3,10 @@ import { HiDownload } from "react-icons/hi"
 export function Hero(){
 
     return (
-        <section className="bg-gradient-to-tr from-black to-gray-800 rounded-b-3xl" >
+        <section className="bg-gradient-to-tr from-black to-gray-700 rounded-br-[5.75rem]" >
+                
             <div className="container mx-auto max-w-4x1 text-white p-2 py-12 flex flex-col md:flex-row">
+
                 
                 <div className="basis-1/2">
                     <h1 className="font-handwriting text-white text-center md:text-left">
@@ -34,9 +36,8 @@ export function Hero(){
                     <h1>Minha foto </h1>
                 </div>
 
-                
-
             </div>
+
         </section>
         
     )
