@@ -1,5 +1,5 @@
 import { HiAcademicCap, HiCodeBracketSquare } from "react-icons/hi2"
-import {AiFillHtml5} from "react-icons/ai"
+import { AiFillHtml5 } from "react-icons/ai"
 import { FaRegNewspaper } from "react-icons/fa"
 
 export function Skills() {
@@ -11,12 +11,12 @@ export function Skills() {
 
   const courses = [
     {
-        name: "Curso Fullstack Next.JS e Node | Alura"
+      name: "Curso Fullstack Next.JS e Node | Alura"
     },
     {
-        name: "Curso Dominando React JS - Felipe Fontoura | Dev Samurai"
+      name: "Curso Dominando React JS - Felipe Fontoura | Dev Samurai"
     }
-]
+  ]
 
   const skills = [
     {
@@ -62,46 +62,46 @@ export function Skills() {
 
         <div className="flex gap-8 md:flex-row">
 
-        <div className="basis-1/2">
           <div className="basis-1/2">
-            <h3 className="mb-4 flex items-center gap-2 text-lg font-extrabold text-gray-700">
-              <HiAcademicCap className="h-8 w-8 text-slate-650" />
-              Educação
-            </h3>
+            <div className="basis-1/2">
+              <h3 className="mb-4 flex items-center gap-2 text-lg font-extrabold text-gray-700">
+                <HiAcademicCap className="h-8 w-8 text-slate-650" />
+                Educação
+              </h3>
 
-            {educations.map((education, index) => (
-              <div
-                key={`education-${index}`}
-                className="mb-2 rounded-lg bg-white p-4 text-sm font-semibold text-gray-900"
-              >
-                {education.name}
-              </div>
-            ))}
+              {educations.map((education, index) => (
+                <div
+                  key={`education-${index}`}
+                  className="mb-2 rounded-lg bg-white p-4 text-sm font-semibold text-gray-900"
+                >
+                  {education.name}
+                </div>
+              ))}
+            </div>
+
+            <div className="basis-1/2">
+              <h3 className="mb-4 flex items-center gap-2 text-lg font-extrabold text-gray-700">
+                <FaRegNewspaper className="h-8 w-8 text-slate-650" />
+                Cursos
+              </h3>
+
+              {courses.map((courses, index) => (
+                <div
+                  key={`courses-${index}`}
+                  className="mb-2 rounded-lg bg-white p-4 text-sm font-semibold text-gray-900"
+                >
+                  {courses.name}
+                </div>
+              ))}
+            </div>
+
           </div>
 
-          <div className="basis-1/2">
-            <h3 className="mb-4 flex items-center gap-2 text-lg font-extrabold text-gray-700">
-              <FaRegNewspaper className="h-8 w-8 text-slate-650" />
-              Cursos
-            </h3>
-
-            {courses.map((courses, index) => (
-              <div
-                key={`courses-${index}`}
-                className="mb-2 rounded-lg bg-white p-4 text-sm font-semibold text-gray-900"
-              >
-                {courses.name}
-              </div>
-            ))}
-          </div>
-
-        </div>
 
 
 
-        
 
-          
+
           <div className="basis-1/2">
             <h3 className="mb-4 flex items-center gap-2 text-lg font-extrabold text-gray-700">
               <HiCodeBracketSquare className="h-8 w-8 text-slate-650" />
@@ -115,7 +115,7 @@ export function Skills() {
                   className="flex flex-row items-center gap-2 md:flex-col md:items-start"
                 >
                   <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-white p-2">
-                  <img
+                    <img
                       src={skill.icon}
                       alt={skill.name}
                       className="h-10 w-10 rounded"

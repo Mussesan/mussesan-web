@@ -9,7 +9,7 @@ export function Testimonials() {
             Depoimentos
           </span>
         </h2>
-        
+
       </div>
       <figure>
         <FaQuoteLeft className="h-8 w-8 text-gray-600" />

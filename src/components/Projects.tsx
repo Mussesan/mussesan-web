@@ -46,11 +46,10 @@ export function Projects() {
             <span className="mr-2 font-headline text-3xl">
               Projetos & Portfólio
             </span>
-            
+
           </h2>
           <p className="relative text-sm py-3 text-gray-400">
-            Alguns dos projetos pessoais e que já realizei ao longo da minha
-            trajetória como programador front-end.
+            Alguns dos projetos pessoais e que já realizei.
           </p>
         </div>
 
@@ -76,6 +75,6 @@ export function Projects() {
       </div>
       <div className="absolute right-0 -mt-[6px] h-3 w-60 rounded-l-full bg-gradient-to-t from-black via-blue-800 to-slate-800 md:w-96" />
     </section>
-    
+
   )
 }
