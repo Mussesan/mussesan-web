@@ -7,7 +7,12 @@ export default {
       handwriting:["Caveat"],
       headline: ["Poppins"]
     },    
-    extend: {},
+    extend: {
+      screens: {
+        'xs': '475px',
+        'xxs': '300px'
+      }
+    },
   },
   plugins: [],
 }

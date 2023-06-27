@@ -15,8 +15,9 @@ export function About() {
                   Fã de carteirinha da família JavaScript, tenho projetos publicados com as seguintes tecnologias:
                 </p>
 
-                <div className="justify-center text-blue-600 mt-10 mb-10 grid md:flex my-4
-                 border-slate-700 border-[0.01rem] rounded-lg shadow-lg shadow-gray-400 min-w-md">
+                <div className="justify-center text-blue-800 my-10 grid md:flex
+                 border-slate-700 border-[0.01rem] rounded-lg shadow-lg shadow-gray-400
+                  xxs:max-w-[100px] xxs:m-auto xxs:my-[3rem] xs:max-w-lg xs:flex">
 
                   <span className="mx-5 my-4" >
                     <span className="font-headline text-xl font-bold">React</span>
@@ -49,8 +50,8 @@ export function About() {
                 </span>
             </div>
 
-            <div className="mx-auto mt-20 max-w-lg">
-                <div className="relative w-full rounded-lg bg-blue-100 p-4 ps-20 md:h-64 md:ps-48">
+            <div className="mx-auto mt-20 max-w-lg mb-10">
+                <div className="relative w-full rounded-lg bg-slate-300 p-4 ps-20 md:h-64 md:ps-48">
                     <div className="relative h-full w-full rounded-lg bg-gray-50 p-4">
                         <p className=" font-handwriting text-xl font-bold mb-2">Olá, muito prazer!</p>
                         <p>

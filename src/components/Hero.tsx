@@ -3,17 +3,16 @@ import { HiDownload } from "react-icons/hi"
 export function Hero(){
 
     return (
-        <section className="bg-gradient-to-tr from-black to-gray-700 rounded-br-[5.75rem]" >
-                
-            <div className="container mx-auto max-w-4x1 text-white p-2 py-12 flex flex-col md:flex-row">
-
-                
+        <section className="bg-gradient-to-tr from-black to-gray-700 rounded-br-[12rem]" >
+            <div className="container mx-auto max-w-4x1 text-white md:px-[7rem] md:py-[3rem] xxs:px-1 xxs:py-7 flex flex-col md:flex-row">
                 <div className="basis-1/2">
+
                     <h1 className="font-handwriting text-white text-center md:text-left">
                         <span className="font-handwriting block text-3xl text-blue-100 text-center md:text-left">Olá, me chamo </span>
                         <span className="font-headline font-semibold text-5xl">Gustavo </span>
                         <span className="font-headline font-light text-5xl text-blue-400">Musse</span>
                     </h1>
+
                     <h2 className="items-center justify-center gap-2 flex text-center md:text-left">
                         <div className="h-1 w-12 rounded-full bg-blue-800 "></div>
                         Desenvolvedor Fullstsack React Node JS
@@ -29,7 +28,7 @@ export function Hero(){
                         <a href="#" className="button flex text-gray-500 hover:text-gray-900 flex-center gap-2 ">
                             <HiDownload />baixe meu CV
                         </a>
-                    </div>
+                    </div>                    
                 </div>
 
                 <div className="basis-1/2 text-center flex-col md:flex-row">
@@ -37,8 +36,7 @@ export function Hero(){
                 </div>
 
             </div>
-
-        </section>
-        
+            <div className="absolute left-0 -mt-[6px] h-3 xxs:w-60 rounded-r-full bg-gradient-to-t from-black via-blue-800 to-blue-900 md:w-96" />
+        </section>        
     )
 }
