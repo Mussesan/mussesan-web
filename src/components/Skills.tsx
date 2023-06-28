@@ -21,22 +21,22 @@ export function Skills() {
   const skills = [
     {
       name: "HTML5/CSS3",
-      icon: "images/html.svg",
+      icon: "src/assets/images/icons/html.svg",
       level: 95,
     },
     {
       name: "JavaScript",
-      icon: "images/js.svg",
+      icon: "src/assets/images/icons/js.svg",
       level: 90,
     },
     {
       name: "React.js",
-      icon: "images/react.svg",
-      level: 85,
+      icon: "src/assets/images/icons/react.svg",
+      level: 75,
     },
     {
       name: "Node.js",
-      icon: "./assets/node.svg",
+      icon: 'src/assets/images/icons/node.svg',
       level: 65,
     },
   ]
@@ -88,8 +88,7 @@ export function Skills() {
               {courses.map((courses, index) => (
                 <div
                   key={`courses-${index}`}
-                  className="mb-2 rounded-lg bg-white p-4 text-sm font-semibold text-gray-900"
-                >
+                  className="mb-2 rounded-lg bg-white p-4 text-sm font-semibold text-gray-900">
                   {courses.name}
                 </div>
               ))}

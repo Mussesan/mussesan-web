@@ -1,6 +1,8 @@
 import emailjs from "@emailjs/browser"
 import { FormEvent, useRef, useState } from "react"
-import { FaSpinner, FaWhatsapp } from "react-icons/fa"
+import { FaWhatsapp } from "react-icons/fa"
+import { ImSpinner10, } from "react-icons/im"
+import { CiCircleAlert } from "react-icons/ci"
 import {
     HiCheckCircle,
     HiOutlineEnvelope,
@@ -22,10 +24,10 @@ export function Contact() {
 
         emailjs
             .sendForm(
-                "service_sf8b2ti",
-                "template_6wgy6nc",
+                "s ervice_err4yar",
+                "t emplate_et3toxw",
                 form.current,
-                "4GbIsCzVifbY3ve0-"
+                "K 5ZOl2rPQ8bYp89Nv"
             )
             .then(
                 () => {
@@ -43,26 +45,26 @@ export function Contact() {
     const contacts = [
         {
             name: "WhatsApp",
-            description: "+55 12 9.999-9999",
-            link: "https://wa.me/5512982041640?text=Olá...",
+            description: "+55 34 9.9678-1980",
+            link: "https://wa.me/5534996781980?text=Olá...",
             icon: <FaWhatsapp className="h-10 w-10" />,
         },
         {
             name: "Email",
-            description: "joao-test@testemail.com",
+            description: "gmusse.dev@gmail.com",
             link: "mailto:joao-test@testemail.com?subject=Olá...",
             icon: <HiOutlineEnvelope className="h-10 w-10" />,
         },
         {
-            name: "São José dos Campos",
-            description: "Centro, 123",
-            link: "https://goo.gl/maps/4yacADQtLB8jz8zn9?coh=178573&entry=tt",
+            name: "Uberlândia - MG",
+            description: "Centro, 1140",
+            link: "https://goo.gl/maps/hmhw5TyNgrytoMe96",
             icon: <HiOutlineMapPin className="h-10 w-10" />,
         },
     ]
 
     return (
-        <section id="contact" className="bg-blue-700 text-white">
+        <section id="contact" className="bg-gradient-to-tr from-black via-slate-900 to-neutral-900 text-gray-200">
             <div className="container mx-auto max-w-4xl p-4 py-8">
                 <div className="mb-6">
                     <h2 className="z-50 mb-2">
@@ -72,13 +74,12 @@ export function Contact() {
                         <span className="font-handwriting text-4xl">Comigo</span>
                     </h2>
                     <p className="text-sm">
-                        Se preferir, entre em contato comigo me enviando uma mensagem por aqui. <br />
-                        Basta colcoar o seu nome e o motivo do contato
+                        Entre em contato comigo, enviando uma mensagem por aqui. Ou através do WhatsApp.
                     </p>
 
                 </div>
 
-                <div className="flex flex-col gap-6 md:flex-row">
+                <div className="flex flex-col gap-10 md:flex-row">
                     <div className="basis-2/3">
                         <form ref={form} onSubmit={sendEmail}>
                             <div className="mb-4">
@@ -91,7 +92,7 @@ export function Contact() {
                                 <textarea
                                     id="message"
                                     name="message"
-                                    className="h-36 w-full rounded-lg border border-white bg-transparent p-2 outline-none"
+                                    className="h-40 w-full rounded-lg border border-gray-300 bg-transparent p-2 outline-none active:scale-[102%] transition-transform"
                                     required
                                 />
                             </div>
@@ -104,7 +105,7 @@ export function Contact() {
                                         Seu nome:
                                     </label>
                                     <input
-                                        className="w-full rounded-lg border border-white bg-transparent p-2 outline-none"
+                                        className="w-full rounded-lg border border-gray-300 bg-transparent p-2 outline-none active:scale-[102%] transition-transform"
                                         type="text"
                                         name="fullName"
                                         id="fullName"
@@ -114,12 +115,12 @@ export function Contact() {
                                 <div className="flex-grow">
                                     <label
                                         htmlFor="email"
-                                        className="mb-2 block ps-4 font-headline font-semibold"
+                                        className="mb-2 block ps-4 font-headline font-semibold "
                                     >
                                         Seu email:
                                     </label>
                                     <input
-                                        className="w-full rounded-lg border border-white bg-transparent p-2 outline-none"
+                                        className="w-full rounded-lg border border-gray-300 bg-transparent p-2 outline-none active:scale-[102%] transition-transform"
                                         type="email"
                                         name="email"
                                         id="email"
@@ -131,24 +132,36 @@ export function Contact() {
                             <div>
                                 <button
                                     type="submit"
-                                    className="button flex items-center gap-2 text-blue-700"
+                                    className="mb-10 mt-5 w-1/2 rounded-lg border border-gray-400 p-2 outline-none
+                                    hover:bg-gradient-to-t hover:from-black hover:via-blue-950/10 hover:to-blue-800/60
+                                    active:transform-90
+                                    "
                                     disabled={loading}
                                 >
-                                    {loading && <FaSpinner className="h-4 w-4 animate-spin" />}
-                                    {success && <HiCheckCircle className="h-4 w-4" />}
+
                                     Enviar mensagem
                                 </button>
 
+                                {loading && <ImSpinner10 className="h-10 w-10 animate-spin absolute -mt-20 ml-72" />}
+                                {success && (
+                                    <span className="text-green-500 absolute p-8 text-bold md:-mb-0">
+                                        <p>Obrigado pelo contato, retornarei o mais breve possível!</p>
+                                        <HiCheckCircle className="h-8 w-8  " />
+                                        {/* <HiCheckCircle className="h-8 w-8 ml-[26rem] -mt-7 absolute" /> */}
+                                    </span>
+                                )}
+
                                 {error && (
-                                    <p className="mt-2">
-                                        Ocorreu um erro ao enviar a mensagem, tente novamente mais
-                                        tarde.
-                                    </p>
+                                    <span className="text-red-500/90 absolute p-8 xs:h-40">
+                                        <p>Ocorreu um erro ao enviar a mensagem, tente novamente mais tarde.</p>
+                                        {/* <CiCircleAlert className="h-8 w-8 ml-[32rem] xxs:-mt-7 md:absolute xxs:relative"/> */}
+                                        <CiCircleAlert className="h-8 w-8" />
+                                    </span>
                                 )}
                             </div>
                         </form>
                     </div>
-                    <div className="basis-1/3">
+                    <div className="basis-1/3 xxs:mt-16 xs:mt-2">
                         {contacts.map((contact, index) => (
                             <div
                                 key={`contact-${index}`}
