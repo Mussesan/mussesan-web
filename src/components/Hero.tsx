@@ -1,5 +1,3 @@
-import { HiDownload } from "react-icons/hi"
-
 export function Hero() {
 
     return (
