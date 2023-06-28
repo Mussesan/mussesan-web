@@ -1,5 +1,4 @@
 import { HiAcademicCap, HiCodeBracketSquare } from "react-icons/hi2"
-import { AiFillHtml5 } from "react-icons/ai"
 import { FaRegNewspaper } from "react-icons/fa"
 
 export function Skills() {
