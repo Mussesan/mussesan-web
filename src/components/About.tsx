@@ -13,15 +13,14 @@ export function About() {
             <span className="relative text-md text-gray-500 mt-2 text-justify font-bold">
                 <p>
                   Natural de Uberaba MG, especialista em apreciar café com pão de queijo, mas também não dispoenso um chá. Sou um admirador da natureza, paro facilmente, para admirar a beleza de uma simples manhã de sol. Gosto de viajar, gosto de sol e praia mas também gosto de um dia frio para maratonar uma série.
-                </p><br />
-                
-                <p>Por último e não menos importante, sou discipulo do mestre Qui Gon e amigo do Kenobi.</p>
+                </p>
+            
             </span>
         
 
-                {/* <div className="justify-center text-blue-800 my-10 grid md:flex
+                <div className="justify-center text-blue-800 my-10 grid md:flex
                  border-slate-700 border-[0.01rem] rounded-lg shadow-lg shadow-gray-400
-                  xxs:max-w-[100px] xxs:m-auto xxs:my-[3rem] xs:max-w-lg xs:flex">
+                  xxs:max-w-[100px] xxs:m-auto xxs:my-[3rem] xs:max-w-2xl xs:flex">
 
                   <span className="mx-5 my-4" >
                     <span className="font-headline text-xl font-bold">React</span>
@@ -44,7 +43,7 @@ export function About() {
                       <span className="font-headline text-xl font-bold">Tailwind</span>
                       <SiTailwindcss className="text-[1.5em] mx-auto"/>                      
                   </span>
-                </div> */}
+                </div>
             </div>
 
             <div className="mx-auto mt-20 max-w-lg mb-10">

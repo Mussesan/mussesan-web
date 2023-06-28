@@ -40,7 +40,7 @@ export function Services() {
 
 
 
-            <div className="my-7 flex flex-col gap-20 md:flex-row">
+            <div className="my-7 flex flex-col gap-20 md:flex-row md:mx-20 xxs:mx-10">
                 {services.map((service, index) => (
                     <div className="mb-7 basis-1/3 rounded-lg p-8 bg-gradient-to-t from-slate-900 via-neutral-950 to-slate-700"
                         key={`service-${index}`}>

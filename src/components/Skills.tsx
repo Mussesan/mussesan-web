@@ -20,28 +20,28 @@ export function Skills() {
   const skills = [
     {
       name: "HTML5/CSS3",
-      icon: "src/assets/images/icons/html.svg",
+      icon: "./assets/html.png",
       level: 95,
     },
     {
       name: "JavaScript",
-      icon: "src/assets/images/icons/js.svg",
+      icon: "./assets/js.png",
       level: 90,
     },
     {
       name: "React.js",
-      icon: "src/assets/images/icons/react.svg",
+      icon: "./assets/react.png",
       level: 75,
     },
     {
       name: "Node.js",
-      icon: 'src/assets/images/icons/node.svg',
+      icon: "{./assets/node.png}",
       level: 65,
     },
   ]
 
   return (
-    <section className="rounded-br-[80px] bg-gray-300 md:rounded-br-[180px]">
+    <section className="rounded-br-[80px] bg-gray-300 md:rounded-br-[180px] ">
       <div className="container mx-auto max-w-4xl px-4 py-12">
         <div className="relative mb-4 p-4 text-center">
           <h2 className="relative z-50 mb-2 font-bold">
