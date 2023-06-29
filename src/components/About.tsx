@@ -20,7 +20,7 @@ export function About() {
 
                 <div className="justify-center text-blue-800 my-10 grid md:flex
                  border-slate-700 border-[0.01rem] rounded-lg shadow-lg shadow-gray-400
-                  xxs:max-w-[100px] xxs:m-auto xxs:my-[3rem] xs:max-w-2xl xs:flex">
+                  ">
 
                   <span className="mx-5 my-4" >
                     <span className="font-headline text-xl font-bold">React</span>
