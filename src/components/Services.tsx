@@ -5,12 +5,12 @@ export function Services() {
         {
             title: "Web",
             description:
-                "Desenvolvimento de sites e sistemas web estáticos e dinâmicos com React.js, Next.js, HTML5 e CSS3.",
+                "Desenvolvimento de sites e sistemas web estáticos e dinâmicos com React e Tailwind Next.js, HTML5 e CSS3.",
             icon: <HiComputerDesktop className="h-12 w-12" />,
         },
         {
             title: "Sistemas",
-            description: "Desenvolvimento de sistemas e APIs REST com Node.js.",
+            description: "Desenvolvimento de sistemas e APIs Rest com Node.js.",
             icon: <HiCommandLine className="h-12 w-12" />,
         },
         {
@@ -23,34 +23,22 @@ export function Services() {
     
 
     return (        
+    <div className="bg-yellow-600/90 -mt-1 h-screen">
         <section className=" container text-center xxs:m-auto xxs:mb-9">
-             <div className="p-4 text-center">
-                <p className="text-md font-semibold uppercase text-blue-600">
-                    O que faço de melhor
-                </p>
-                <h2 className="mb-2 font-bold text-blue-900">
-                    <span className="mr-2 font-headline text-3xl">Meus</span>
-                    <span className="font-handwriting text-4xl">Serviços</span>
-                </h2>
-                <p className=" text-md text-gray-600 font-bold">
-                    Atendo uma gama completa de serviços, do front-end ao back com excelência no trabalho em equipe.
-                </p>
-            </div> 
 
+                <div className="my-7 flex flex-col gap-20 md:flex-row md:mx-20 xxs:mx-10">
+                    {services.map((service, index) => (
+                        <div className="mb-7 basis-1/3 rounded-lg p-8 bg-gradient-to-t from-slate-900 via-neutral-950 to-slate-700"
+                            key={`service-${index}`}>
 
+                            <div className="mb-6 -mt-5 -ml-5 text-gray-200">{service.icon}</div>
+                            <h3 className="text-xl font-headline font-semibold mb-3 xxs:mt-4 md:-mt-14 text-white ">{service.title}</h3>
+                            <p className="text-sm mt-8 text-gray-200 text-justify">{service.description}</p>
+                        </div>
+                    ))}
+                </div>
 
-
-            <div className="my-7 flex flex-col gap-20 md:flex-row md:mx-20 xxs:mx-10">
-                {services.map((service, index) => (
-                    <div className="mb-7 basis-1/3 rounded-lg p-8 bg-gradient-to-t from-slate-900 via-neutral-950 to-slate-700"
-                        key={`service-${index}`}>
-
-                        <div className="mb-2 text-gray-200">{service.icon}</div>
-                        <h3 className="text-xl font-headline font-semibold mb-3 -mt-2 text-white ">{service.title}</h3>
-                        <p className="text-sm text-gray-200">{service.description}</p>
-                    </div>
-                ))}
-            </div>
         </section>
+    </div>
     )
 }

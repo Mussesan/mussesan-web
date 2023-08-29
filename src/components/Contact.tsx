@@ -144,23 +144,26 @@ export function Contact() {
 
                                 {loading && <ImSpinner10 className="h-10 w-10 animate-spin absolute -mt-20 ml-72" />}
                                 {success && (
-                                    <span className="text-green-500 absolute p-8 text-bold md:-mb-0">
+                                    <span className="text-green-500 absolute p-8 text-bold md:-mb-0 -mt-4">
+                                        <HiCheckCircle className="h-8 w-8 mx-auto " />
                                         <p>Obrigado pelo contato, retornarei o mais breve possível!</p>
-                                        <HiCheckCircle className="h-8 w-8  " />
+                                        
                                         {/* <HiCheckCircle className="h-8 w-8 ml-[26rem] -mt-7 absolute" /> */}
                                     </span>
                                 )}
 
                                 {error && (
-                                    <span className="text-red-500/90 absolute p-8 xs:h-40">
-                                        <p>Ocorreu um erro ao enviar a mensagem, tente novamente mais tarde.</p>
+                                    <span className="text-red-500/90 absolute p-8 xs:h-40 -mt-4">
+                                        <CiCircleAlert className="h-8 w-8 mx-auto"/>
+                                        <p>Ocorreu um erro ao enviar a mensagem,<br/> tente novamente mais tarde.</p>
                                         {/* <CiCircleAlert className="h-8 w-8 ml-[32rem] xxs:-mt-7 md:absolute xxs:relative"/> */}
-                                        <CiCircleAlert className="h-8 w-8" />
+                                        
                                     </span>
                                 )}
                             </div>
                         </form>
                     </div>
+
                     <div className="basis-1/3 xxs:mt-16 xs:mt-2">
                         {contacts.map((contact, index) => (
                             <div
@@ -168,8 +171,7 @@ export function Contact() {
                                 className="mb-4 flex items-center gap-4 rounded-lg border border-dashed border-gray-400 p-4"
                             >
                                 {contact.icon}
-                                <div>
-                                    <p className="font-headline font-semibold">{contact.name}</p>
+                                <div className="flex justify-between w-full">
                                     <a
                                         href={contact.link}
                                         target="_blank"
@@ -177,10 +179,15 @@ export function Contact() {
                                     >
                                         {contact.description}
                                     </a>
+                                    <span>
+                                        {contact.name === "Email" && (
+                                            <img src="" alt="copied icon" />
+                                        )}
+                                    </span>
                                 </div>
                             </div>
                         ))}
-                    </div>
+                    </div>                    
                 </div>
             </div>
         </section>

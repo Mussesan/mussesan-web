@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist -r https://github.com/mussesan/mussesan-web",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist -r https://github.com/mussesan/mussesan-web",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -19,6 +19,7 @@
     "react-icons": "^4.9.0"
   },
   "devDependencies": {
+    "@types/node": "^20.3.2",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.59.0",

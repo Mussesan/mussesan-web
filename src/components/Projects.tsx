@@ -83,6 +83,8 @@ export function Projects() {
         </div>
       </div>
       <div className="absolute right-0 -mt-[6px] h-3 w-60 rounded-l-full bg-gradient-to-t from-black via-blue-800 to-slate-800 md:w-96" />
+
+
     </section>
 
   )

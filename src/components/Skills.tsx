@@ -2,6 +2,8 @@ import { HiAcademicCap, HiCodeBracketSquare } from "react-icons/hi2"
 import { FaRegNewspaper } from "react-icons/fa"
 
 export function Skills() {
+
+  
   const educations = [
     {
       name: "Bacharel em Sistemas de Informação - Universidade de Uberaba",
@@ -19,30 +21,34 @@ export function Skills() {
 
   const skills = [
     {
-      name: "HTML5/CSS3",
-      icon: "./assets/html.png",
+      name: "HTML5 CSS3",
+      icon: '../../../dist/assets/react.svg',
       level: 95,
     },
     {
       name: "JavaScript",
-      icon: "./assets/js.png",
+      icon: "./dist/assets/js.png",
       level: 90,
     },
     {
       name: "React.js",
-      icon: "./assets/react.png",
+      icon: "assets/react.png",
       level: 75,
     },
     {
       name: "Node.js",
-      icon: "{./assets/node.png}",
+      icon: "assets/node.png",
       level: 65,
     },
   ]
+  
+
+  
 
   return (
     <section className="rounded-br-[80px] bg-gray-300 md:rounded-br-[180px] ">
       <div className="container mx-auto max-w-4xl px-4 py-12">
+         
         <div className="relative mb-4 p-4 text-center">
           <h2 className="relative z-50 mb-2 font-bold">
             <span className="mr-2 font-headline text-3xl text-gray-800">
@@ -53,8 +59,7 @@ export function Skills() {
             </span>
           </h2>
           <p className="relative text-sm text-gray-700">
-            Fullstack Developer | React | Node.Js | Next.Js | TypeScript
-            | JavaScript | Flutter
+            Fullstack Developer | React | TailwindCSS | Node.Js | TypeScript
           </p>
           <div className="absolute left-1/2 top-3 z-0 h-10 w-10 rounded-lg bg-blue-400/10" />
         </div>
