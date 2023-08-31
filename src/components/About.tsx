@@ -15,13 +15,12 @@ export function About() {
                     <span className="relative text-lg text-gray-500 mt-2 text-justify font-bold ">
                         <p className="mb-4">
                             Tenho 31 anos, sou um desenvolvedor frontend focado no domínio de React com TailwindCSS.
-                            Também possuo experiência com Angular (versão 12), CSS modules,
-                            MaterialUI e Bootstrap 5.
+                            Também possuo experiência com Angular (versão 12), CSS modules e Bootstrap 5.
                         </p>
 
                         <p>
-                            Minha trajetória é marcada por uma sólida experiência na colaboração em equipe,
-                            buscando sempre alcançar os objetivos de forma conjunta e eficaz.
+                        Minha trajetória profissional é marcada pela colaboração em equipe, 
+                        buscando sempre alcançar os objetivos de forma conjunta e eficaz.
                         </p>
                     </span>
                 </div>

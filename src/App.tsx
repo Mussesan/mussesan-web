@@ -13,7 +13,7 @@ import './App.css'
 
 function App() {
   return (
-    <main>
+    <main className="scroll-smooth">
       <Hero />
       <About />
       <Projects2 />
