@@ -1,6 +1,26 @@
-
+import { AiFillGithub } from 'react-icons/ai'
+import {TiSocialLinkedinCircular} from 'react-icons/ti'
+import {TiSocialInstagramCircular} from 'react-icons/ti'
 
 export function About() {
+
+    const socialLinks = [
+        {
+            name: 'GitHub',
+            icon: <AiFillGithub />,
+            link: 'https://github.com/Mussesan'
+        },
+        {
+            name: 'LinkedIn',
+            icon: <TiSocialLinkedinCircular />,
+            link: 'https://www.linkedin.com/in/gmusse-dev/'
+        },
+        {
+            name: 'Instagram',
+            icon: <TiSocialInstagramCircular />,
+            link: 'https://www.instagram.com/_vesselm/'
+        }
+    ]
 
     return (
         // <div className="shapedividers_com-1960 -mt-1">
@@ -19,8 +39,8 @@ export function About() {
                         </p>
 
                         <p>
-                        Minha trajetória profissional é marcada pela colaboração em equipe, 
-                        buscando sempre alcançar os objetivos de forma conjunta e eficaz.
+                            Minha trajetória profissional é marcada pela colaboração em equipe,
+                            buscando sempre alcançar os objetivos de forma conjunta e eficaz.
                         </p>
                     </span>
                 </div>
@@ -28,13 +48,13 @@ export function About() {
                 <div className="mx-auto mt-16 max-w-lg mb-10">
                     <div className="relative w-full rounded-lg bg-slate-300 p-4 ps-20 md:h-64 md:ps-48">
                         <div className="relative h-full w-full rounded-lg bg-gray-50 p-4">
-                            <table className="w-full text-sm flex justify-center">
+                            <table className="w-full text-sm flex justify-center ">
                                 <tbody>
                                     <tr>
                                         <td className="font-headline font-bold uppercase text-blue-900">
                                             Idade:
                                         </td>
-                                        <td>30</td>
+                                        <td>31</td>
                                     </tr>
                                     <tr>
                                         <td className="font-headline font-bold uppercase text-blue-900">
@@ -74,6 +94,26 @@ export function About() {
                                                 <span className="m-auto inline-flex h-3 w-3 rounded-full bg-green-500 z-10"></span>
                                             </span>
                                         </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="font-headline font-bold uppercase text-blue-900 mt-4">
+                                            Social:
+                                        </td>
+                                        <td className='row-span-2'>
+                                            <span className='flex text-3xl gap-4  text-blue-900 mt-4 '>
+                                                {socialLinks.map((item) => {
+
+                                                    return (<a
+                                                        className='shadow-lg shadow-black rounded-full' 
+                                                            href={item.link}
+                                                            target='_blank'
+                                                            >
+                                                                {item.icon}
+                                                        </a>)
+                                                })}
+                                            </span>
+                                        </td>
+
                                     </tr>
                                 </tbody>
                             </table>
