@@ -30,29 +30,39 @@ export function Projects2(){
         }
     ]
 
-    return(<>
-        {projectsItens.map((item)=>{
-            return (<section className="flex flex-row bg-blue-600">
+    return(<section className="shapedividers_com-5269 -mt-1 ">           
+                <section className={`
+                    bg-[url(https://images.unsplash.com/photo-1632779274972-fcd2bda1919f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1562&q=80)]
+                    h-auto bg-fixed w-full bg-no-repeat pb-32
+                    `}>
+                        <div className="flex flex-col justify-center text-cemter items-center">
+                            <span className="font-headline md:text-8xl text-4xl font-semibold text-gray-100 pt-28 mx-auto mb-16 md:mb-32">
+                                Projetos
+                                </span>
 
-                <div className=" gap-2">
-                    <div>
-                        <img 
-                            className="w-28 h-28"
-                            src={item.imgUrl} 
-                            alt="" 
-                        />
-                    </div>
-
-                    <div>
-                        <span>{item.title}</span>
-                    </div>
-
-                    <div>
-                        <span>{item.tech}</span>
-                    </div>
-                </div>
-            </section>)
-        })}
-    
-    </>)
+                            {/* Cards */}
+                            <div className="">
+                                <div className={`container flex flex-wrap justify-around items-center text-center gap-8
+                                
+                                `}> 
+                                    {projectsItens.map((index)=>{
+                                        return(
+                                            <div className={`bg-[#262626] h-64 w-60 md:h-72 md:w-72 rounded-2xl blur-none
+                                            `}>
+                                                <div className={`bg-auto bg-no-repeat rounded-t-2xl`}>
+                                                    <img className="rounded-t-2xl"
+                                                    src={index.imgUrl} alt="" />
+                                                </div>
+                                                <div className="font-headline flex flex-col mt-8">
+                                                    <span className="text-white font-semibold">{index.title}</span>
+                                                    <span className="text-gray-300 bg-black w-[8rem]">{index.tech}</span>
+                                                </div>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                            </div>
+                        </div>
+                </section>       
+        </section>)
 }
