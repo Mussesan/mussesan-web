@@ -179,7 +179,7 @@ export function Contact() {
                                     >
                                         {contact.description}
                                     </a>
-                                    <span>
+                                    <span className="absolute right-60">
                                         {contact.name === "Email" && (
                                             <img src="" alt="copied icon" />
                                         )}

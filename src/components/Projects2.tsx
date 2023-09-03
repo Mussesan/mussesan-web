@@ -1,34 +1,38 @@
+
 export function Projects2(){
+
     const projectsItens = [
         {
             title: 'Github API',
             imgUrl:
                 'https://raw.githubusercontent.com/ShaifArfan/techHub-blog/main/banner.png',
-            tech: ['React JS', 'CSS Modules', 'API'],
-            workUrl: 'https://github.com/ShaifArfan/techHub-blog',
+            techs: ['React JS', 'CSS Modules', 'API'],
+            projectUrl: 'https://github.com/ShaifArfan/techHub-blog',
         },
         {
-            title: "some text",
+            title: "Gerador de Senhas",
             imgUrl:
                 'https://raw.githubusercontent.com/ShaifArfan/shaif-s-cuisine/main/readmeImg/banner.png',
-            tech: ['HTML', 'CSS', 'Netlify'],
-            workUrl: 'https://github.com/ShaifArfan/shaif-s-cuisine',
+            techs: ['JavaScript', 'HTML', 'CSS'],
+            projectUrl: 'https://github.com/ShaifArfan/shaif-s-cuisine',
         },
         {
-            title: "some text",
+            title: "Gerenciador de Chamados",
             imgUrl:
                 'https://raw.githubusercontent.com/ShaifArfan/AYANs-portfolio/main/ReadMeImages/ReadMeBanner.png',
-            tech: ['React JS', 'CSS'],
-            workUrl: 'https://github.com/ShaifArfan/AYANs-portfolio',
+            techs: ['React JS', 'CSS'],
+            projectUrl: 'https://github.com/ShaifArfan/AYANs-portfolio',
         },
         {
-            title: 'some text',
+            title: 'Tabnews Clone',
             imgUrl:
                 'https://raw.githubusercontent.com/ShaifArfan/artistic/main/readmeImg/banner.png',
-            tech: ['React JS', 'CSS'],
-            workUrl: 'https://github.com/ShaifArfan/artistic',
+            techs: ['React JS', 'CSS'],
+            projectUrl: 'https://github.com/ShaifArfan/artistic',
         }
     ]
+
+    
 
     return(<section className="shapedividers_com-5269 -mt-1 ">           
                 <section className={`
@@ -36,7 +40,7 @@ export function Projects2(){
                     h-auto bg-fixed w-full bg-no-repeat pb-32
                     `}>
                         <div className="flex flex-col justify-center text-cemter items-center">
-                            <span className="font-headline md:text-8xl text-4xl font-semibold text-gray-100 pt-28 mx-auto mb-16 md:mb-32">
+                            <span className="font-headline md:text-8xl text-6xl font-semibold text-gray-100 pt-28 mx-auto mb-16 md:mb-32">
                                 Projetos
                                 </span>
 
@@ -45,17 +49,36 @@ export function Projects2(){
                                 <div className={`container flex flex-wrap justify-around items-center text-center gap-8
                                 
                                 `}> 
-                                    {projectsItens.map((index)=>{
+                                    {projectsItens.map((item)=>{
                                         return(
-                                            <div className={`bg-[#262626] h-64 w-60 md:h-72 md:w-72 rounded-2xl blur-none
+                                            <div    key={item.title}
+                                             className={`bg-gray-300/90 h-64 w-60 md:h-72 md:w-72 rounded-2xl blur-none
                                             `}>
                                                 <div className={`bg-auto bg-no-repeat rounded-t-2xl`}>
                                                     <img className="rounded-t-2xl"
-                                                    src={index.imgUrl} alt="" />
+                                                    src={item.imgUrl} alt="" />
                                                 </div>
-                                                <div className="font-headline flex flex-col mt-8">
-                                                    <span className="text-white font-semibold">{index.title}</span>
-                                                    <span className="text-gray-300 bg-black w-[8rem]">{index.tech}</span>
+                                                <div className="font-headline flex flex-col text-start ml-4">
+
+                                                    <span className={`text-blue-950 font-semibold h-max bg-red-300/0
+                                                                        mt-6
+                                                    `}>
+                                                        {item.title}
+                                                    </span>
+
+                                                    <span className={`mt-4 flex gap-2 text-sm`}>     
+                                                        {item.techs.map((tech)=>
+                                                                        <span className={`text-gray-300 border-[1px] rounded p-[4px] bg-gray-900 border-gray-50/30
+                                                                        
+                                                                        `}>
+                                                                            {tech}
+                                                                        </span>)}
+                                                                        
+                                                    </span>
+                                                    <span className="">
+                                                        <button>Detalhes</button>
+                                                        <button>Abrir</button>
+                                                    </span>
                                                 </div>
                                             </div>
                                         )
