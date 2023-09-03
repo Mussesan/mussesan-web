@@ -2,7 +2,7 @@ import { AiFillGithub } from 'react-icons/ai'
 import {TiSocialLinkedinCircular} from 'react-icons/ti'
 import {TiSocialInstagramCircular} from 'react-icons/ti'
 
-export function About() {
+export default function About() {
 
     const socialLinks = [
         {
@@ -23,11 +23,11 @@ export function About() {
     ]
 
     return (
-        // <div className="shapedividers_com-1960 -mt-1">
-        <section className="shapedividers_com-1960 -mt-1">
+
+        <section className="shapedividers_com-1960 -mt-1 mb-8">
             <div className="container mx-auto -mt-1 pt-12 max-w-3xl p-4 ">
 
-                <div className="relative p-4 text-center">
+                <div className="relative p-4 text-center mt-6">
                     <h2 className="relative z-50 mb-10 font-bold text-blue-900">
                         <span className="mr-2 font-handwriting text-6xl">Sobre</span>
                         <span className="font-handwriting text-6xl">mim</span>
@@ -126,5 +126,3 @@ export function About() {
         </section>
     )
 }
-
-export default About

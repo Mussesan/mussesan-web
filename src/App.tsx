@@ -1,6 +1,6 @@
 import { Hero } from "./components/Hero"
 
-import { Services } from "./components/Services"
+// import { Services } from "./components/Services"
 import { Projects2 } from "./components/Projects2"
 import { Skills } from "./components/Skills"
 import { Contact } from "./components/Contact"
@@ -17,7 +17,7 @@ function App() {
       <Hero />
       <About />
       <Projects2 />
-      <Services />
+      {/* <Services /> */}
       <Skills />
       <Contact />
       <Footer />
