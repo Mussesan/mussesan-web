@@ -29,12 +29,16 @@ export default function About() {
 
                 <div className="relative p-4 text-center mt-6">
                     <h2 className="relative z-50 mb-10 font-bold text-blue-900">
-                        <span className="mr-2 font-handwriting text-6xl">Sobre</span>
-                        <span className="font-handwriting text-6xl">mim</span>
+                        <span className="mr-2 font-play text-6xl">Sobre mim</span>
+                        
                     </h2>
-                    <span className="relative text-lg text-gray-500 mt-2 text-justify font-bold ">
+                    <span className="relative text-lg text-gray-500 mt-2 text-start font-bold ">
                         <p className="mb-4">
-                            Tenho 31 anos, sou um desenvolvedor frontend focado no domínio de React com TailwindCSS.
+                            Tenho 31 anos, formado em Sistemas de Informação, pela <u>
+                                <a className='text-blue-500' href="https://emec.mec.gov.br/emec/consulta-cadastro/detalhamento/d96957f455f6405d14c6542552b0f6eb/MTQz" target='_blank'>
+                                    Universidade de Uberaba
+                                </a>
+                            </u>, sou um desenvolvedor frontend focado no domínio de React com TailwindCSS.
                             Também possuo experiência com Angular (versão 12), CSS modules e Bootstrap 5.
                         </p>
 

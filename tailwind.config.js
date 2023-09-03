@@ -5,7 +5,8 @@ export default {
     fontFamily:{
       sans:["Open Sans"],
       handwriting:["Caveat"],
-      headline: ["Poppins"]
+      headline: ["Poppins"],
+      play:["Play"]
     },    
     extend: {
       screens: {

@@ -66,14 +66,15 @@ export function Hero() {
                                 <span className="ml-2 font-bold xxs:text-sm md:text-base ">Baixe meu CV</span>
                             </button>
 
-                            <span className="italic text-gray-300 mr-px-2 xxs:mx-auto md:mx-2" > ou </span>
+                            <span className="italic text-gray-300 mr-px-2 md:mx-2" > ou </span>
 
-                            <a className={`px-4 py-3 bg-white/90 rounded-md font-bold unoderline text-blue-700 
+                            <a href='#contact'
+                            className={`px-4 py-3 bg-white/90 rounded-md font-bold unoderline text-blue-700 
                             shadow-md transform active:scale-[102%] mx-2 flex justify-center md:justify-start cursor-pointer
                             hover:shadow-md  xxs:text-xs md:text-base xxs:bt-3 md:bt-0
-                            w-[10rem] md:w-64 md:rounded-r-[3rem] rounded-b-3xl`}>
-                                <LuCopy className="text-blue-700 flex my-auto mr-2 h-5 w-5" />
-                                gmusse.dev@gmail.com
+                            w-[10rem] md:w-[12rem] md:rounded-r-[3rem] rounded-b-3xl`}>
+                                
+                                Fale comigo
                             </a>
                         </div>
                     </div>

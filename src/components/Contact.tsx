@@ -3,17 +3,33 @@ import { FormEvent, useRef, useState } from "react"
 import { FaWhatsapp } from "react-icons/fa"
 import { ImSpinner10, } from "react-icons/im"
 import { CiCircleAlert } from "react-icons/ci"
+import { MdContentCopy, MdOutlineOpenInNew } from 'react-icons/md'
+import { AiFillCheckCircle } from 'react-icons/ai'
 import {
     HiCheckCircle,
-    HiOutlineEnvelope,
-    HiOutlineMapPin,
+    HiOutlineEnvelope
 } from "react-icons/hi2"
+
+
+
+
 
 export function Contact() {
     const form = useRef<HTMLFormElement>(null)
     const [loading, setLoading] = useState(false)
     const [success, setSuccess] = useState(false)
     const [error, setError] = useState(false)
+
+    let copied = false
+
+    console.log(copied)
+
+    function copy() { //função copiar para área de transferência
+        navigator.clipboard.writeText('gmusse.dev@gmail.com')
+        if (!copied) {
+            copied = true
+        }
+    }
 
     const sendEmail = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault()
@@ -48,33 +64,28 @@ export function Contact() {
             description: "+55 34 9.9678-1980",
             link: "https://wa.me/5534996781980?text=Olá...",
             icon: <FaWhatsapp className="h-10 w-10" />,
+            contactIcon: <MdOutlineOpenInNew className="h-6 w-6" />
         },
         {
             name: "Email",
             description: "gmusse.dev@gmail.com",
-            link: "mailto:joao-test@testemail.com?subject=Olá...",
+            link: 'mailto:gmusse.dev@gmail.com?subject=Olá...',
             icon: <HiOutlineEnvelope className="h-10 w-10" />,
-        },
-        {
-            name: "Uberlândia - MG",
-            description: "Centro, 1140",
-            link: "https://goo.gl/maps/hmhw5TyNgrytoMe96",
-            icon: <HiOutlineMapPin className="h-10 w-10" />,
-        },
+            contactIcon: <MdContentCopy className="h-6 w-6" />
+        }
     ]
 
     return (
-        <section id="contact" className="bg-gradient-to-tr from-black via-slate-900 to-neutral-900 text-gray-200">
-            <div className="container mx-auto max-w-4xl p-4 py-8">
+        <section id="contact" className="-mt-1 bg-gradient-to-tr from-black via-slate-900 to-neutral-900 text-gray-200 shapedividers_com-5568">
+            <div className="container mx-auto max-w-4xl p-4 py-8 mt-32">
                 <div className="mb-6">
                     <h2 className="z-50 mb-2">
-                        <span className="mr-2 font-headline text-3xl font-semibold">
-                            Fale
+                        <span className="mr-2 font-play text-6xl font-semibold">
+                            Fale Comigo
                         </span>
-                        <span className="font-handwriting text-4xl">Comigo</span>
                     </h2>
                     <p className="text-sm">
-                        Entre em contato comigo, enviando uma mensagem por aqui. Ou através do WhatsApp.
+                        Entre em contato comigo, enviando uma mensagem por aqui.
                     </p>
 
                 </div>
@@ -92,7 +103,7 @@ export function Contact() {
                                 <textarea
                                     id="message"
                                     name="message"
-                                    className="h-40 w-full rounded-lg border border-gray-300 bg-transparent p-2 outline-none active:scale-[102%] transition-transform"
+                                    className="h-auto w-full shadow-inner  shadow-black rounded-lg border-b-2 focus:bg-blue-900/10 bg-transparent p-2 outline-none active:scale-[102%] transition-transform"
                                     required
                                 />
                             </div>
@@ -105,7 +116,7 @@ export function Contact() {
                                         Seu nome:
                                     </label>
                                     <input
-                                        className="w-full rounded-lg border border-gray-300 bg-transparent p-2 outline-none active:scale-[102%] transition-transform"
+                                        className="w-full shadow-inner  shadow-black rounded-lg border-b-2 focus:bg-blue-900/10 bg-transparent  p-2 outline-none active:scale-[102%] transition-transform"
                                         type="text"
                                         name="fullName"
                                         id="fullName"
@@ -120,7 +131,7 @@ export function Contact() {
                                         Seu email:
                                     </label>
                                     <input
-                                        className="w-full rounded-lg border border-gray-300 bg-transparent p-2 outline-none active:scale-[102%] transition-transform"
+                                        className="w-full shadow-inner  shadow-black rounded-lg border-b-2 focus:bg-blue-900/10 bg-transparent  p-2 outline-none active:scale-[102%] transition-transform"
                                         type="email"
                                         name="email"
                                         id="email"
@@ -164,29 +175,36 @@ export function Contact() {
                         </form>
                     </div>
 
-                    <div className="basis-1/3 xxs:mt-16 xs:mt-2">
+                    <div className="basis-1/3 mb-16">
+                        <div className="mb-8"> Ou através dos canais abaixo:</div>
                         {contacts.map((contact, index) => (
-                            <div
-                                key={`contact-${index}`}
-                                className="mb-4 flex items-center gap-4 rounded-lg border border-dashed border-gray-400 p-4"
-                            >
-                                {contact.icon}
-                                <div className="flex justify-between w-full">
-                                    <a
-                                        href={contact.link}
-                                        target="_blank"
-                                        className="text-gray-300 underline underline-offset-2"
-                                    >
-                                        {contact.description}
-                                    </a>
-                                    <span className="absolute right-60">
-                                        {contact.name === "Email" && (
-                                            <img src="" alt="copied icon" />
-                                        )}
-                                    </span>
+                            <div className="bg-gradient-to-tr from-green-600 via-purple-600 to-cyan-700 p-[1px] rounded-lg mb-4">
+                                <div
+                                    key={`contact-${index}`}
+                                    className="h-16 px-4 flex items-center gap-4 rounded-lg bg-gradient-to-tr from-black via-slate-900 to-neutral-900"
+                                >
+                                    {contact.icon}
+                                    <div className="flex justify-between w-full">
+                                        <a id={contact.name}
+                                            href={contact.link}
+                                            target="_blank"
+                                            className="text-gray-300 underline underline-offset-2"
+                                            onClick={copy}
+                                        >
+                                            {contact.description}
+                                        </a>
+                                        <a onClick={copy}>{contact.contactIcon}</a>
+                                    </div>
                                 </div>
+
                             </div>
                         ))}
+                        <span className="absolute flex items-center w-36 bg-white/10 justify-around">
+                            <span>
+                                E-mail copiado! 
+                            </span>
+                            <AiFillCheckCircle />
+                        </span>
                     </div>                    
                 </div>
             </div>

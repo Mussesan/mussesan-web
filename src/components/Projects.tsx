@@ -1,91 +1,129 @@
-import { HiArrowTopRightOnSquare } from "react-icons/hi2"
 
-export function Projects() {
-
-  const projects = [
-    {
-      title: "CRUD em React e PostgreSQL",
-      description: "Projeto de pedido online de uma loja virtual",
-      image:
-        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
-      link: "#",
-      colSpan: "col-span-2",
-    },
-    {
-      title: "CRUD em React e PostgreSQL",
-      description: "Projeto de pedido online de uma loja virtual",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHdlYnNpdGVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-      link: "#",
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Geek App",
-      description: "Projeto protótipo realizado durante e conclusão de curso. Rede social voltada ao público Geek. Prótipo feito em Angular2",
-      image:
-        "https://media.istockphoto.com/id/1305995602/photo/responsive-floating-responsive-design.jpg?b=1&s=170667a&w=0&k=20&c=uFqBz27v_B0UxcslnvZxd9c0D9eJAef7veRZf6b-v-A=",
-      link: "#",
-      //colSpan: "col-span-1 md:col-span-2",
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Gerador de Senhas",
-      description: "Projeto realizado em Javascript Vanilla com manipulação da DOM.",
-      image:
-        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29kaW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-      link: "#",
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Angular To-do",
-      description: "Primeiro projeto feito em Angular2 durante aulas do prof. André Baltieri. Projeto simples porém realizado com dedicação.",
-      image:
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9iaWxlJTIwYXBwfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-      link: "https://github.com/Mussesan/my-todo-list",
-      colSpan: "col-span-1",
-    },
-  ]
-
-  return (
-
-    <section className="md:rounded-tl-[12rem] bg-gradient-to-tr from-black via-slate-900 to-gray-800 text-gray-200">
-      <div className="container mx-auto max-w-4xl p-4 py-12">
-        <div className="relative p-4 text-center">
-          <h2 className="relative z-50 mb-2 text-white">
-            <span className="mr-2 font-headline text-4xl">
-              Projetos & Portfólio
-            </span>
-
-          </h2>
-          <p className="relative text-md py-3 text-gray-300">
-            Alguns dos projetos pessoais e que já realizei.
-          </p>
-        </div>
-
-        <div className="grid grid-cols- gap-4 md:grid-cols-2">
-          {projects.map((projects, index) => (
-            <div
-              key={index}
-              className={`group relative h-52 cursor-pointer rounded-md ${projects.colSpan} bg-cover bg-center`}
-              style={{ backgroundImage: `url('${projects.image}')` }}
-            >
-              <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-md bg-gradient-to-tr from-slate-900 to-slate-600 text-white opacity-0 transition-all group-hover:opacity-90">
-                <h4 className="font-headline text-lg font-semibold">
-                  {projects.title}
-                </h4>
-                <p className=" mb-4 text-sm text-center px-2">{projects.description}</p>
-                <a href={projects.link} target="_blank">
-                  <HiArrowTopRightOnSquare className="h-6 w-6" />
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="absolute right-0 -mt-[6px] h-3 w-60 rounded-l-full bg-gradient-to-t from-black via-blue-800 to-slate-800 md:w-96" />
+import {MdOutlineOpenInNew} from 'react-icons/md'
+import {BsGithub} from 'react-icons/bs'
 
 
-    </section>
+export function Projects(){
 
-  )
+    function flipCard(){
+        console.log(`clicado`)
+    }
+
+    const projectsItens = [
+        {
+            title: 'Github API',
+            imgUrl:
+                'https://raw.githubusercontent.com/ShaifArfan/techHub-blog/main/banner.png',
+            techs: ['React JS', 'Styled Components', 'API Rest'],
+            projectUrl: 'https://github.com/ShaifArfan/techHub-blog',
+            deployUrl: ''
+        },
+        {
+            title: "Gerador de Senhas",
+            imgUrl:
+                'https://raw.githubusercontent.com/ShaifArfan/shaif-s-cuisine/main/readmeImg/banner.png',
+            techs: ['JavaScript', 'HTML', 'CSS'],
+            projectUrl: 'https://github.com/Mussesan/password-generator',
+            deployUrl: 'passwordgenerator-gmusse.netlify.app'
+        },
+        {
+            title: "Gerenciador de Chamados",
+            imgUrl:
+                'https://raw.githubusercontent.com/ShaifArfan/AYANs-portfolio/main/ReadMeImages/ReadMeBanner.png',
+            techs: ['React JS', 'CSS'],
+            projectUrl: '#',
+            deployUrl: ''
+        },
+        {
+            title: 'Tabnews Clone',
+            imgUrl:
+                'https://raw.githubusercontent.com/ShaifArfan/artistic/main/readmeImg/banner.png',
+            techs: ['React JS', 'CSS'],
+            projectUrl: 'https://github.com/ShaifArfan/artistic',
+            deployUrl: ''
+        }
+    ]
+
+    
+
+    return(<section className="shapedividers_com-5269 -mt-1">
+                <div className={`
+                    bg-[url(https://images.unsplash.com/photo-1632779274972-fcd2bda1919f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1562&q=80)]
+                    h-auto bg-fixed w-full bg-no-repeat
+                    `}>
+                        <div className='bg-gradient-to-t from-black via-white/10 h-auto'>
+                            <div className="flex flex-col justify-center text-cemter items-center">
+                                <span className="font-play md:text-8xl text-6xl font-semibold text-gray-100 pt-28 mx-auto mb-16 md:mb-32">
+                                    Projetos
+                                    </span>
+
+                                {/* Cards */}
+                                <div className="">
+                                    <div className={`container flex flex-wrap justify-around items-center text-center gap-8
+                                        mb-16 md:mb-48
+                                    `}> 
+                                        {projectsItens.map((item)=>{
+                                            return(
+                                                <div    key={item.title}
+                                                className={`bg-indigo-300/20 h-80 w-60 rounded-2xl
+                                                    md:h-[23rem] md:w-72  shadow-2xl shadow-black                                                    
+                                                `}>                                                    
+                                                    <div className=''>
+                                                        <div className={`bg-auto bg-no-repeat rounded-t-2xl`}>
+                                                            <img className="rounded-t-2xl"
+                                                            src={item.imgUrl} alt="" />
+                                                        </div>
+                                                        <div className="font-headline flex flex-col text-start">
+
+                                                            <span className={`text-blue-100 font-semibold h-max bg-red-300/0
+                                                            drop-shadow-[0_2.2px_1.2px_rgba(0,0,0,1)]
+                                                            shadow-black mt-6 px-2 select-none
+                                                            `}>
+                                                                {item.title}
+                                                            </span>
+
+                                                            <span className={`mt-4 flex text-[0.6rem] px-2`}>     
+                                                                {item.techs.map((tech)=>
+                                                                                <span className={`text-gray-300 border-[1px] rounded-xl p-[8px] bg-gray-900 border-gray-50/30
+                                                                                select-none
+                                                                                `}>
+                                                                                    {tech}
+                                                                                </span>)}
+                                                                                
+                                                            </span>
+
+                                                            <span className='w-60 h-[1px] bg-gray-100/40 mt-4
+                                                                md:w-72
+                                                            '></span>
+                                                        </div>
+                                                            <span className="mt-4 flex justify-around gap-2 text-sm">
+                                                                <a href={item.projectUrl}
+                                                                target='_blank'
+                                                                className={`text-gray-300 border-[1px] rounded w-28 h-10 bg-gray-900 border-gray-50/30 flex items-center justify-around
+                                                                
+                                                                `}>
+                                                                    Detalhes 
+                                                                    <span className='text-yellow-400 text-lg'>
+                                                                        <BsGithub />
+                                                                    </span>
+                                                                </a> 
+                                                                <a href={item.deployUrl}
+                                                                target='_blank'
+                                                                className="text-gray-300 border-[1px] rounded w-20 h-10 bg-gray-900 border-gray-50/30 flex items-center justify-around">
+                                                                    Abrir 
+                                                                    <span className='text-green-400 text-md'>
+                                                                        <MdOutlineOpenInNew />
+                                                                    </span>
+                                                                </a>
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>    
+        </section>)
 }
