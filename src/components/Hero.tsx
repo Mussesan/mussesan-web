@@ -1,4 +1,3 @@
-import { LuCopy } from 'react-icons/lu'
 import { SiTailwindcss } from 'react-icons/si'
 import { DiReact } from 'react-icons/di'
 import { BiGlassesAlt } from 'react-icons/bi'
@@ -14,9 +13,9 @@ export function Hero() {
             
             `}>
             <div className="bg-gradient-to-t from-black via-black/30 to-purple-800/20 h-full flex items-center">
-                <div className="container mx-auto  text-white md:px-[7rem]  flex flex-col md:flex-row drop-shadow-2xl shadow-white">
+                <div className="container mx-auto  text-white md:px-[5rem] 2xl:px-[12rem] flex flex-col md:flex-row drop-shadow-2xl shadow-white">
                     <div className="basis-1/2 shadow-inner">
-                        <span className={`font-headline font-semibold text-blue-200 md:text-lg text-sm absolute md:-top-24 -top-28
+                        <span className={`font-headline font-semibold text-white-90 md:text-lg text-sm absolute md:-top-24 -top-28
                         -ml-9 bg-black/60 rounded-tr-[50px] rounded-bl-[50px] md:w-[24rem] w-[18rem] h-14 flex justify-center 
                         items-center select-none                    
                         `}>
@@ -26,7 +25,7 @@ export function Hero() {
                             <span className="flex flex-col justify-start">
                                 <span className="font-headline uppercase font-bold text-6xl md:text-[12rem] text-blue-100">React</span>
                                 <div className={`flex md:text-[3rem] absolute md:right-[18rem] md:top-[7.8rem] gap-2 text-yellow-200
-                                text-2xl -right-1 top-7
+                                text-2xl -right-1 top-7 2xl:right-[29rem]
                                 `}>
                                     <span className='animate-spin-slow '>
                                         <DiReact />
@@ -51,7 +50,9 @@ export function Hero() {
                         </div>
 
 
-                        <div className="md:flex items-center text-center md:justify-end absolute -bottom-[12rem] md:-bottom-[4rem] md:right-20">
+                        <div className={`md:flex items-center text-center md:justify-end absolute -bottom-[12rem] md:-bottom-[4rem] md:right-20 2xl:right-[15rem]
+
+                        `}>
 
                             <button
                                 type="button"

@@ -178,7 +178,7 @@ export function Contact() {
                     <div className="basis-1/3 mb-16">
                         <div className="mb-8"> Ou através dos canais abaixo:</div>
                         {contacts.map((contact, index) => (
-                            <div className="bg-gradient-to-tr from-green-600 via-purple-600 to-cyan-700 p-[1px] rounded-lg mb-4">
+                            <div className="bg-gradient-to-tr from-green-600 via-purple-600 to-cyan-700 p-[2px] rounded-lg mb-4">
                                 <div
                                     key={`contact-${index}`}
                                     className="h-16 px-4 flex items-center gap-4 rounded-lg bg-gradient-to-tr from-black via-slate-900 to-neutral-900"
@@ -199,12 +199,6 @@ export function Contact() {
 
                             </div>
                         ))}
-                        <span className="absolute flex items-center w-36 bg-white/10 justify-around">
-                            <span>
-                                E-mail copiado! 
-                            </span>
-                            <AiFillCheckCircle />
-                        </span>
                     </div>                    
                 </div>
             </div>

@@ -5,17 +5,13 @@ import {BsGithub} from 'react-icons/bs'
 
 export function Projects(){
 
-    function flipCard(){
-        console.log(`clicado`)
-    }
-
     const projectsItens = [
         {
             title: 'Github API',
             imgUrl:
                 'https://raw.githubusercontent.com/ShaifArfan/techHub-blog/main/banner.png',
             techs: ['React JS', 'Styled Components', 'API Rest'],
-            projectUrl: 'https://github.com/ShaifArfan/techHub-blog',
+            projectUrl: 'https://github.com/Mussesan',
             deployUrl: ''
         },
         {
@@ -24,14 +20,14 @@ export function Projects(){
                 'https://raw.githubusercontent.com/ShaifArfan/shaif-s-cuisine/main/readmeImg/banner.png',
             techs: ['JavaScript', 'HTML', 'CSS'],
             projectUrl: 'https://github.com/Mussesan/password-generator',
-            deployUrl: 'passwordgenerator-gmusse.netlify.app'
+            deployUrl: 'https://passwordgenerator-gmusse.netlify.app'
         },
         {
             title: "Gerenciador de Chamados",
             imgUrl:
                 'https://raw.githubusercontent.com/ShaifArfan/AYANs-portfolio/main/ReadMeImages/ReadMeBanner.png',
             techs: ['React JS', 'CSS'],
-            projectUrl: '#',
+            projectUrl: 'https://github.com/Mussesan',
             deployUrl: ''
         },
         {
@@ -39,7 +35,7 @@ export function Projects(){
             imgUrl:
                 'https://raw.githubusercontent.com/ShaifArfan/artistic/main/readmeImg/banner.png',
             techs: ['React JS', 'CSS'],
-            projectUrl: 'https://github.com/ShaifArfan/artistic',
+            projectUrl: 'https://github.com/Mussesan',
             deployUrl: ''
         }
     ]
@@ -65,8 +61,8 @@ export function Projects(){
                                         {projectsItens.map((item)=>{
                                             return(
                                                 <div    key={item.title}
-                                                className={`bg-indigo-300/20 h-80 w-60 rounded-2xl
-                                                    md:h-[23rem] md:w-72  shadow-2xl shadow-black                                                    
+                                                className={`bg-indigo-300/20 h-[21rem] w-60 rounded-2xl
+                                                    md:h-[22rem] md:w-72 shadow-2xl shadow-black                                                    
                                                 `}>                                                    
                                                     <div className=''>
                                                         <div className={`bg-auto bg-no-repeat rounded-t-2xl`}>
